@@ -1,0 +1,111 @@
+\documentclass[12pt]{report}
+% if you wanted to print twoside of one paper each page
+% \documentclass[12pt, twoside]{report}
+
+\usepackage{minted}
+\usepackage{markdown}
+\usepackage{xcolor}
+\definecolor{LightGray}{gray}{0.9}
+\usepackage{titlesec}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{array}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage{hyperref}
+\hypersetup{pdfmenubar=true, pdfstartview=FitH, pdfpagemode=FullScreen, colorlinks=true, linkcolor=blue, anchorcolor=green, citecolor=blue, urlcolor=cyan, filecolor=magenta, pdftoolbar=true, pdfpagemode=UseOutlines}
+
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{ {Images/} }
+
+% \usepackage{fontspec}
+% \setmainfont{Times New Roman}
+
+\usepackage{tabularx}
+
+\usepackage{xepersian}
+\settextfont[BoldFont={IRNazaninBold}, ItalicFont={IRNazaninIranic}, Extension = .ttf, ExternalLocation=Fonts/]{IRNazanin}
+
+% in \lr fields we have font compatibility size prolem becuse of that we set persian font that have latin sutible characters in it as latin font too for good apperience of document
+\setlatintextfont[BoldFont={IRNazaninBold}, ItalicFont={IRNazaninIranic}, Extension = .ttf, ExternalLocation=Fonts/]{IRNazanin}
+
+% for setting space between lines
+\usepackage{setspace}
+\usepackage{biblatex}
+
+\defpersianfont\IranNastaliq[Path= Fonts/,
+Extension = .ttf,
+Scale=1.2]{IranNastaliq}
+
+
+\author{جاوید چاجی}
+\date{پاییز ۱۴۰۲}
+
+
+
+\begin{document}
+    % Title Page
+    \begin{titlepage}
+        \centering
+        \begin{tabularx}{\textwidth}{lXr}
+            \includegraphics[width=2.7cm]
+            {Images/Ferdowsi_University_of_Mashhad_Logo.png}
+            &
+            % \centering O
+            &
+            \includegraphics[width=2.5cm]{Images/Faculty_of_Engineering_Ferdowsi_University_of_Mashhad_Logo.png}
+        \end{tabularx}\par\vspace{1cm}
+        {\Large \textsc{پروژه دوره کارشناسی}\\{در رشته مهندسی کامپیوتر}\par}
+        \vspace{1.5cm}
+        {\huge\bfseries طراحی چت بات پاسخگو به سوالات آموزشی دانشجویان\par}
+        \vspace{2cm}
+        ارائه شده به\par
+        {\LARGE \textsc{گروه کامپیوتر}\\{دانشکده مهندسی}\\{دانشگاه فردوسی مشهد}\par}
+        \vspace{2cm}
+        استاد راهنما\par
+        {\Large\bfseries دکتر سید کمال الدین \textsc{غیاثی شیرازی}}
+        \vfill
+        دانشجو\par
+        {\Large\bfseries جاوید چاجی\par}
+    
+        \vfill
+    
+        % Bottom of the page
+        {\large {پاییز ۱۴۰۲}\par}
+    \end{titlepage}
+
+    % space between lines 
+    \setstretch{1.6}
+
+    \input{Chapters/Acknowledgement}
+    \input{Chapters/Appreciation}
+
+    \clearpage
+
+    \pagenumbering{alph}
+    \phantomsection\addcontentsline{toc}{chapter}{فهرست مطالب}
+    \tableofcontents
+    \listoffigures
+    % \listoftables
+    
+    \input{Chapters/Introduction}
+    
+    \pagenumbering{arabic}
+    \input{Chapters/Literature_Review}
+    
+    \input{Chapters/Methodology}
+    
+    % \input{Chapters/Results}
+
+    % \input{Chapters/Discussion}
+
+    \input{Chapters/Conclusion}
+    
+    \input{Chapters/References}
+    
+    \appendix
+    \input{Chapters/Appendix}
+    
+
+\end{document}
