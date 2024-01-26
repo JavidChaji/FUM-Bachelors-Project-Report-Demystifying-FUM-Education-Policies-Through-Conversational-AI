@@ -9,6 +9,8 @@
 \usepackage{titlesec}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 \usepackage{array}
+\usepackage{fourier}
+
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -75,11 +77,27 @@ Scale=1.2]{IranNastaliq}
         {\large {پاییز ۱۴۰۲}\par}
     \end{titlepage}
 
+    \newpage 
+    \ % The empty page
+    \thispagestyle{empty}
+    \newpage
+    
     % space between lines 
     \setstretch{1.6}
 
     \input{Chapters/Acknowledgement}
+
+    \newpage 
+    \ % The empty page
+    \thispagestyle{empty}
+    \newpage
+    
     \input{Chapters/Appreciation}
+
+    \newpage 
+    \ % The empty page
+    \thispagestyle{empty}
+    \newpage
 
     \clearpage
 
