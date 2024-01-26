@@ -8,8 +8,6 @@
 
 [![LinkedIn][LinkedIn-Shield]][Javid-LinkedIn-URL]
 
-# computer-archtecture-mips-practice-two-answer
-
 Ferdowsi University of Mashhad Bachelor's Project Report 
 
 Demystifying FUM Education Policies Through Conversational AI
